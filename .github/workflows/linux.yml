@@ -1,0 +1,20 @@
+name: Linux
+
+on: [push]
+
+jobs:
+  sv-style:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Test
+        run: |
+          cd sv-style
+          git clone https://github.com/TerosTechnology/svStyle-SystemVerilog-Formatter.git
+          cd svStyle-SystemVerilog-Formatter
+          make
+
