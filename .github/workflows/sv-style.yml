@@ -18,9 +18,9 @@ jobs:
           cd svStyle-SystemVerilog-Formatter
           make
       - run: ls
-      - run: cd bin
+      - run: cd svStyle-SystemVerilog-Formatter && cd bin
       - run: ls
-      - run: cd release
+      - run: cd svStyle-SystemVerilog-Formatter && cd bin && cd release
       - run: ls
       - run: 'dir $( $GITHUB_WORKSPACE )'
       - uses: actions/upload-artifact@v2
