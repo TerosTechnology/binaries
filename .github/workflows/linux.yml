@@ -11,9 +11,13 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Test
+      - name: Build
         run: |
           git clone https://github.com/TerosTechnology/svStyle-SystemVerilog-Formatter.git
           cd svStyle-SystemVerilog-Formatter
           make
+      - uses: actions/upload-artifact@v2
+        with:
+          name: svStyle-linux
+          path: svStyle-SystemVerilog-Formatter/bin/release/svStyle
 
