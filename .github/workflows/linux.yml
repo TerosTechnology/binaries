@@ -13,7 +13,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Test
         run: |
-          cd sv-style
           git clone https://github.com/TerosTechnology/svStyle-SystemVerilog-Formatter.git
           cd svStyle-SystemVerilog-Formatter
           make
